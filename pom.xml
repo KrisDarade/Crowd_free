@@ -252,6 +252,12 @@
 			<artifactId>google-api-services-admin</artifactId>
 			<version>directory_v1-rev22-1.16.0-rc</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+			<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 
