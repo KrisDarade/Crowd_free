@@ -214,6 +214,10 @@
 				<artifactId>xmlsec</artifactId>
 			</exclusion>
 			<exclusion>
+			<groupId>ca.juliusdavies</groupId>
+			<artifactId>not-yet-commons-ssl</artifactId>
+			</exclusion>
+			<exclusion>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 			</exclusion>
