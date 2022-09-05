@@ -189,7 +189,7 @@
 					<artifactId>commons-collections</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>xmltooling</groupId>
+					<groupId>org.opensaml</groupId>
 					<artifactId>xmltooling</artifactId>
 				</exclusion>
 			</exclusions>
