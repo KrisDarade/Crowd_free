@@ -204,11 +204,11 @@
 			<version>3.2.2</version>
 			<scope>provided</scope>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.opensaml</groupId>-->
-<!--			<artifactId>xmltooling</artifactId>-->
-<!--			<version>1.4.4</version>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.opensaml</groupId>
+			<artifactId>xmltooling</artifactId>
+			<version>1.4.4</version>
+		</dependency>
 		 <dependency>
             <groupId>xerces</groupId>
             <artifactId>xercesImpl</artifactId>
