@@ -195,7 +195,10 @@
 					<groupId>commons-collections</groupId>
 					<artifactId>commons-collections</artifactId>
 				</exclusion>
-
+				<exclusion>
+					<groupId>xmltooling</groupId>
+					<artifactId>xmltooling</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
