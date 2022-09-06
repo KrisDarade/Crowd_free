@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.miniorange.saml.sso</groupId>
 	<artifactId>crowd-sso</artifactId>
-	<version>1.0.9</version>
+	<version>1.0.15</version>
 
 	<organization>
 		<name>miniOrange</name>
@@ -14,7 +14,7 @@
 	</organization>
 
 	<name>SAML Single Sign On for Crowd Application</name>
-	<description>This is the SAML Single Sign-on:crowd-sso plugin for Atlassian Crowd Application.</description>
+	<description>Single Sign On (SSO) into CROWD and Connected Atlassian Applications (Jira, Confluence, Bitbucket etc) using any SAML compliant applications like ADFS, Azure AD, Okta, OneLogin, G Suite / Google Apps, Keycloak, Ping Federate, Oracle, AuthAnvil, Salesforce, Auth0, Shibboleth, Centrify, OpenAM, Bitium, RSA and many more. CROWD SAML SSO app is easy to use and setup.</description>
 	<packaging>atlassian-plugin</packaging>
 
 	<dependencies>
@@ -67,11 +67,11 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.5.8</version>
-		</dependency> -->
+		</dependency>
 
 		<!-- WIRED TEST RUNNER DEPENDENCIES -->
 
@@ -144,6 +144,26 @@
 		</dependency>  -->
 
 
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+		    <artifactId>json-simple</artifactId>
+		    <version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.15.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
 		<!-- <dependency>
 		    <groupId>com.atlassian.crowd</groupId>
 		    <artifactId>embedded-crowd-api</artifactId>
@@ -204,24 +224,24 @@
 			<groupId>org.opensaml</groupId>
 			<artifactId>xmltooling</artifactId>
 			<version>1.4.4</version>
-		<exclusions>
-			<exclusion>
-				<groupId>org.bouncycastle</groupId>
-				<artifactId>bcprov-jdk15on</artifactId>
-			</exclusion>
-			<exclusion>
-				<groupId>org.apache.santuario</groupId>
-				<artifactId>xmlsec</artifactId>
-			</exclusion>
-			<exclusion>
-			<groupId>ca.juliusdavies</groupId>
-			<artifactId>not-yet-commons-ssl</artifactId>
-			</exclusion>
-			<exclusion>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-			</exclusion>
-		</exclusions>
+			<exclusions>
+				<exclusion>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcprov-jdk15on</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.santuario</groupId>
+					<artifactId>xmlsec</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>ca.juliusdavies</groupId>
+					<artifactId>not-yet-commons-ssl</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		 <dependency>
             <groupId>xerces</groupId>
@@ -265,19 +285,13 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20180130</version>
+			<version>20090211</version>
 		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>com.google.apis</groupId>-->
 <!--			<artifactId>google-api-services-admin</artifactId>-->
 <!--			<version>directory_v1-rev22-1.16.0-rc</version>-->
 <!--		</dependency>-->
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.13</version>
-			<scope>provided</scope>
-		</dependency>
 
 	</dependencies>
 
@@ -296,10 +310,10 @@
 
 					<!-- See here for an explanation of default instructions: -->
 					<!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
-					<!--<instructions> <Atlassian-Plugin-Key>${atlassian.plugin.key}</Atlassian-Plugin-Key>
-						Add package to export here <Export-Package> com.miniorange.saml.sso.api,
-						</Export-Package> Add package import here <Import-Package> org.springframework.osgi.*;resolution:="optional",
-						org.eclipse.gemini.blueprint.*;resolution:="optional", * </Import-Package>
+					<!--<instructions> <Atlassian-Plugin-Key>${atlassian.plugin.key}</Atlassian-Plugin-Key> 
+						Add package to export here <Export-Package> com.miniorange.saml.sso.api, 
+						</Export-Package> Add package import here <Import-Package> org.springframework.osgi.*;resolution:="optional", 
+						org.eclipse.gemini.blueprint.*;resolution:="optional", * </Import-Package> 
 						Ensure plugin is spring powered <Spring-Context>*</Spring-Context> </instructions> -->
 				</configuration>
 			</plugin>
@@ -344,7 +358,7 @@
 		<amps.version>6.2.11</amps.version>
 		<plugin.testrunner.version>1.2.3</plugin.testrunner.version>
 		<atlassian.spring.scanner.version>1.2.13</atlassian.spring.scanner.version>
-		<!-- This key is used to keep the consistency between the key in atlassian-plugin.xml
+		<!-- This key is used to keep the consistency between the key in atlassian-plugin.xml 
 			and the key to generate bundle. -->
 		<atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
 	</properties>
