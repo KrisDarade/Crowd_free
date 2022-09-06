@@ -107,6 +107,12 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.13</version>
 			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-codec</groupId>
+					<artifactId>commons-codec</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -153,7 +159,7 @@
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.15.1</version>
+			<version>1.15.3</version>
 		</dependency>
 
 		<dependency>
@@ -241,6 +247,10 @@
 					<groupId>junit</groupId>
 					<artifactId>junit</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>commons-codec</groupId>
+					<artifactId>commons-codec</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		 <dependency>
@@ -285,7 +295,7 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20090211</version>
+			<version>20180130</version>
 		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>com.google.apis</groupId>-->
