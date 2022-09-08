@@ -239,7 +239,10 @@
 					<groupId>org.apache.santuario</groupId>
 					<artifactId>xmlsec</artifactId>
 				</exclusion>
-
+				<exclusion>
+					<groupId>ca.juliusdavies</groupId>
+					<artifactId>not-yet-commons-ssl</artifactId>
+				</exclusion>
 				<exclusion>
 					<groupId>junit</groupId>
 					<artifactId>junit</artifactId>
@@ -288,6 +291,11 @@
 					<artifactId>junit</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>ca.juliusdavies</groupId>
+			<artifactId>not-yet-commons-ssl</artifactId>
+			<version>0.3.11</version>
 		</dependency>
 		<dependency>
 			<groupId>org.json</groupId>
