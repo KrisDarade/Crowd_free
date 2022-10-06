@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.miniorange.saml.sso</groupId>
@@ -88,11 +88,11 @@
 			<version>1.1.1</version>
 			<scope>provided</scope>
 		</dependency>
-	<!-- <dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.2.2-atlassian-1</version>
-		</dependency>  -->
+		<!-- <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.2.2-atlassian-1</version>
+            </dependency>  -->
 
 		<!-- New Dependency -->
 
@@ -151,9 +151,9 @@
 
 
 		<dependency>
-		    <groupId>com.googlecode.json-simple</groupId>
-		    <artifactId>json-simple</artifactId>
-		    <version>1.1.1</version>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 
 		<dependency>
@@ -253,34 +253,34 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		 <dependency>
-            <groupId>xerces</groupId>
-            <artifactId>xercesImpl</artifactId>
-            <version>2.12.2</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>xml-resolver</groupId>
-            <artifactId>xml-resolver</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-            <version>1.4.01</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.12.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>xml-resolver</groupId>
+			<artifactId>xml-resolver</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.4.01</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>com.atlassian.json</groupId>
 			<artifactId>atlassian-json-jsonorg</artifactId>
 			<version>0.9</version>
 		</dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.7</version>
-        </dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.7</version>
+		</dependency>
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
@@ -296,28 +296,17 @@
 			<groupId>ca.juliusdavies</groupId>
 			<artifactId>not-yet-commons-ssl</artifactId>
 			<version>0.3.11</version>
-			<exclusions>
-			<exclusion>
-					<groupId>org.owasp.esapi</groupId>
-					<artifactId>esapi</artifactId>
-			</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20180130</version>
 		</dependency>
-		<dependency>
-			<groupId>org.owasp.esapi</groupId>
-			<artifactId>esapi</artifactId>
-			<version>2.5.0.0</version>
-		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>com.google.apis</groupId>-->
-<!--			<artifactId>google-api-services-admin</artifactId>-->
-<!--			<version>directory_v1-rev22-1.16.0-rc</version>-->
-<!--		</dependency>-->
+		<!--		<dependency>-->
+		<!--			<groupId>com.google.apis</groupId>-->
+		<!--			<artifactId>google-api-services-admin</artifactId>-->
+		<!--			<version>directory_v1-rev22-1.16.0-rc</version>-->
+		<!--		</dependency>-->
 
 	</dependencies>
 
